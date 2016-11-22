@@ -8,7 +8,7 @@ float	inter_sphere(t_obj *obj, t_vec dist, t_vec raydir)
 	disc[1] = 2.0 * ((raydir.x * dist.x) + (raydir.y * dist.y) + (raydir.z * dist.z));
 	disc[2] = (dist.x * dist.x) + (dist.y * dist.y) + (dist.z * dist.z) - (obj->rayon * obj->rayon);
 	if ((disc[3] = (disc[1] * disc[1]) - (4 * disc[0] * disc[2])) < 0)
-		return (MAX_DOUBLE);
+		return (MAX_FLOAT);
 	if (disc[3] == 0)
 		disc[4] = -disc[1] / (2 * disc[0]);
 	else if (disc[3] > 0)

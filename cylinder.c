@@ -13,7 +13,7 @@ double	inter_cylinder(t_obj *obj, t_vec dist, t_vec raydir, int op)
 	tmp = sub_vec(dist, multiply_vec(obj->dir, dot(dist, obj->dir)));
 	disc[2] = dot(tmp, tmp) - (obj->rayon * obj->rayon);
 	if ((disc[3] = disc[1] * disc[1] - 4 * disc[0] * disc[2]) < 0)
-		return (MAX_DOUBLE);
+		return (MAX_FLOAT);
 	if (disc[3] == 0)
 		disc[4] = -disc[1] / (2 * disc[0]);
 	else if (disc[3] > 0.0)
